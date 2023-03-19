@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="orders.css"?>
+
+<!DOCTYPE orders [
+    <!ENTITY product001 '
+        <code>001</code>
+        <name>Edible oil</name>
+        <price>90</price>'>
+
+    <!ENTITY product004 '
+        <code>004</code>
+        <name>P_Biscuits</name>
+        <price>10</price>'>
+
+    <!ENTITY product006 '
+        <code>006</code>
+        <name>Toothbrush</name>
+        <price>40</price>'>
+
+    <!ENTITY product008 '
+        <code>006</code>
+        <name>Cornflakes</name>
+        <price>60</price>'>
+
+    <!ENTITY product009 '
+        <code>009</code>
+        <name>shampoo</name>
+        <price>20</price>'>
+]>
+
+
+<orders>
+    <title type="title">
+        <orderNo>OrderNo</orderNo>
+        <code>Code</code>
+        <name>Name</name>
+        <price>Price</price>
+        <quantity>Qty</quantity>
+        <total>Total</total>
+        <date>Date</date>
+        <custNo>Customer No</custNo>
+    </title>
+
+    <order orderId="1001" PaymentMethod="Cash">
+        <orderNo>1001</orderNo>
+        <product>&product001;</product>
+        <quantity>3</quantity>
+        <total>270</total>
+        <date>23/05/2022</date>
+        <custNo>9876598765</custNo>
+    </order>
+
+    <order orderId="1002" PaymentMethod="Cash">
+        <orderNo>1002</orderNo>
+        <product>&product001;</product>
+        <quantity>5</quantity>
+        <total>450</total>
+        <date>23/05/2022</date>
+        <custNo>4213598734</custNo>
+    </order>
+      
+    <order orderId="1003" PaymentMethod="Cash">
+        <orderNo>1003</orderNo>
+        <product>&product006;</product>
+        <quantity>2</quantity>
+        <total>80</total>
+        <date>23/05/2022</date>
+        <custNo>2342342341</custNo>
+    </order>
+    
+    <order orderId="1004" PaymentMethod="Online">
+        <orderNo>1004</orderNo>
+        <product>&product009;</product>
+        <quantity>15</quantity>
+        <total>300</total>
+        <date>23/05/2022</date>
+        <custNo>8890102345</custNo>
+    </order>
+    
+    <order orderId="1005" PaymentMethod="Cash">
+        <orderNo>1005</orderNo>
+        <product>&product001;</product>
+        <quantity>1</quantity>
+        <total>90</total>
+        <date>23/05/2022</date>
+        <custNo>7008945671</custNo>
+    </order>
+    
+    <order orderId="1006" PaymentMethod="Online">
+        <orderNo>1006</orderNo>
+        <product>&product006;</product>
+        <quantity>10</quantity>
+        <total>400</total>
+        <date>23/05/2022</date>
+        <custNo>9090909000</custNo>
+    </order>
+    
+    <order orderId="1007" PaymentMethod="Online">
+        <orderNo>1007</orderNo>
+        <product>&product009;</product>
+        <quantity>50</quantity>
+        <total>1000</total>
+        <date>23/05/2022</date>
+        <custNo>5437896510</custNo>
+    </order>
+    
+    <order orderId="1008" PaymentMethod="Cash">
+        <orderNo>1008</orderNo>
+        <product>&product001;</product>
+        <quantity>10</quantity>
+        <total>900</total>
+        <date>23/05/2022</date>
+        <custNo>7879797979</custNo>
+    </order>
+    
+    <order orderId="1009" PaymentMethod="Online">
+        <orderNo>1009</orderNo>
+        <product>&product006;</product>
+        <quantity>4</quantity>
+        <total>160</total>
+        <date>24/05/2022</date>
+        <custNo>2200222012</custNo>
+    </order>
+
+    <order orderId="1010" PaymentMethod="Cash">
+        <orderNo>1010</orderNo>
+        <product>&product006;</product>
+        <quantity>9</quantity>
+        <total>360</total>
+        <date>25/05/2022</date>
+        <custNo>5467458791</custNo>
+    </order>
+
+    <order orderId="1011" PaymentMethod="Cash">
+        <orderNo>1011</orderNo>
+        <product>&product009;</product>
+        <quantity>6</quantity>
+        <total>120</total>
+        <date>24/05/2022</date>
+        <custNo>4346356289</custNo>
+    </order>
+
+    <order orderId="1012" PaymentMethod="Cash">
+        <orderNo>1012</orderNo>
+        <product>&product001;</product>
+        <quantity>50</quantity>
+        <total>4500</total>
+        <date>26/05/2022</date>
+        <custNo>7645745199</custNo>
+    </order>
+
+    <order orderId="1013" PaymentMethod="Cash">
+        <orderNo>1013</orderNo>
+        <product>&product009;</product>
+        <quantity>2</quantity>
+        <total>40</total>
+        <date>24/05/2022</date>
+        <custNo>7887348888</custNo>
+    </order>
+
+    <order orderId="1014" PaymentMethod="Cash">
+        <orderNo>1014</orderNo>
+        <product>&product001;</product>
+        <quantity>5</quantity>
+        <total>450</total>
+        <date>24/05/2022</date>
+        <custNo>4367543876</custNo>
+    </order>
+
+    <order orderId="1015" PaymentMethod="Online">
+        <orderNo>1015</orderNo>
+        <product>&product001;</product>
+        <quantity>12</quantity>
+        <total>1080</total>
+        <date>24/05/2022</date>
+        <custNo>0880888880</custNo>
+    </order>
+
+    <order orderId="1016" PaymentMethod="Online">
+        <orderNo>1016</orderNo>
+        <product>&product001;</product>
+        <quantity>15</quantity>
+        <total>1350</total>
+        <date>30/05/2022</date>
+        <custNo>4377764728</custNo>
+    </order>
+
+    <order orderId="1017" PaymentMethod="Online">
+        <orderNo>1017</orderNo>
+        <product>&product001;</product>
+        <quantity>20</quantity>
+        <total>1800</total>
+        <date>24/05/2022</date>
+        <custNo>9823473469</custNo>
+    </order>
+
+    <order orderId="1018" PaymentMethod="Cash">
+        <orderNo>1018</orderNo>
+        <product>&product009;</product>
+        <quantity>100</quantity>
+        <total>2000</total>
+        <date>27/05/2022</date>
+        <custNo>8789798999</custNo>
+    </order>
+
+    <order orderId="1019" PaymentMethod="Cash">
+        <orderNo>1019</orderNo>
+        <product>&product009;</product>
+        <quantity>20</quantity>
+        <total>400</total>
+        <date>23/05/2022</date>
+        <custNo>5654638289</custNo>
+    </order>
+
+    <order orderId="1020" PaymentMethod="Cash">
+        <orderNo>1020</orderNo>
+        <product>&product009;</product>
+        <quantity>70</quantity>
+        <total>1400</total>
+        <date>24/05/2022</date>
+        <custNo>9887689456</custNo>
+    </order>
+
+    <order orderId="1021" PaymentMethod="Cash">
+        <orderNo>1021</orderNo>
+        <product>&product009;</product>
+        <quantity>3</quantity>
+        <total>60</total>
+        <date>26/05/2022</date>
+        <custNo>9876598765</custNo>
+    </order>
+
+    <order orderId="1022" PaymentMethod="Online">
+        <orderNo>1022</orderNo>
+        <product>&product004;</product>
+        <quantity>2</quantity>
+        <total>20</total>
+        <date>27/05/2022</date>
+        <custNo>8789798999</custNo>
+    </order>
+
+    <order orderId="1023" PaymentMethod="Cash">
+        <orderNo>1023</orderNo>
+        <product>&product004;</product>
+        <quantity>5</quantity>
+        <total>75</total>
+        <date>30/05/2022</date>
+        <custNo>9823473469</custNo>
+    </order>
+
+    <order orderId="1024" PaymentMethod="Cash">
+        <orderNo>1024</orderNo>
+        <product>&product009;</product>
+        <quantity>20</quantity>
+        <total>440</total>
+        <date>02/06/2022</date>
+        <custNo>9090909000</custNo>
+    </order>
+      
+    <order orderId="1025" PaymentMethod="Online">
+        <orderNo>1025</orderNo>
+        <product>&product001;</product>
+        <quantity>10</quantity>
+        <total>990</total>
+        <date>02/06/2022</date>
+        <custNo>8789798999</custNo>
+    </order>
+
+</orders>

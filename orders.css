@@ -1,0 +1,151 @@
+SCRIPT {
+  display: none;
+}
+* {
+  display: inline-block;
+}
+
+order[PaymentMethod="Cash"]::after {
+  content: "";
+  background-image: url("./cash.png");
+}
+
+order[PaymentMethod="Online"]::after {
+  content: "";
+  background-image: url("./wireless.png");
+}
+
+order[PaymentMethod="Cash"]::after,
+order[PaymentMethod="Online"]::after {
+  background-size: 3.5vh 3.5vh;
+  position: absolute;
+  width: 3.5vh;
+  height: 3.5vh;
+  z-index: 2;
+  min-height: 1rem;
+}
+
+title[type="title"] {
+  font-weight: bold;
+  height: 2rem;
+  line-height: 2rem;
+  background-color: #b9c9fe !important;
+  width: 100%;
+  color: #0033a6;
+  margin-bottom: 0.5rem;
+}
+
+orders {
+  background-color: #e8edff;
+  padding: 1rem;
+  border-top: 2px solid #94aafb;
+  border-bottom: 2px solid #94aafb;
+  min-width: 730px;
+}
+
+order {
+  margin-bottom: 0.5rem;
+  display: block;
+  border: 2px solid white;
+  width: 100%;
+  text-align: left;
+  height: 4vh;
+  line-height: 4vh;
+  position: relative;
+  color: #666699;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+order:hover {
+  background-color: #b9c9fe;
+  color: #3333a6;
+  scale: 1.03;
+  transition: 0.5s ease-in-out;
+}
+
+orderNo {
+  width: 8vw;
+  min-width: 3.7rem;
+}
+
+code {
+  width: 5vw;
+  min-width: 2.4rem;
+}
+
+name,
+custNo {
+  width: 15vw;
+  min-width: 6.82rem;
+}
+
+price,
+quantity,
+total {
+  width: 10vw;
+  min-width: 4.5rem;
+}
+
+order price::before,
+order total::before {
+  content: "$ ";
+}
+
+date {
+  width: 10vw;
+  min-width: 6rem;
+}
+
+custNo {
+  margin-left: 1vh;
+}
+
+title > custNo {
+  margin-left: 0;
+}
+
+/* small */
+@media screen and (min-width: 768px) {
+  order[PaymentMethod="Cash"]::after,
+  order[PaymentMethod="Online"]::after {
+    right: 1rem;
+  }
+}
+/* medium screen */
+@media screen and (min-width: 992px) {
+  order {
+    padding: 0;
+  }
+}
+/* full size */
+@media screen and (min-width: 1200px) {
+  order {
+    padding: 0 2rem;
+  }
+  order[PaymentMethod="Cash"]::after,
+  order[PaymentMethod="Online"]::after {
+    right: 4rem;
+  }
+  title[type="title"] {
+    padding-left: 2rem;
+  }
+}
+
+@media screen and (orientation: portrait) and (max-device-width: 600px) and (max-device-height: 800px),
+  screen and (orientation: landscape) and (max-device-width: 800px) and (max-device-height: 600px),
+  only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+  * {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  order[PaymentMethod="Cash"]::after,
+  order[PaymentMethod="Online"]::after {
+    right: 0;
+    background-size: 2.5vh 2.5vh;
+    width: 2.5vh;
+    height: 2.5vh;
+    bottom: 0.75vh;
+  }
+}
