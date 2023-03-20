@@ -5,18 +5,18 @@ SCRIPT {
   display: inline-block;
 }
 
-tr[PaymentMethod="Cash"]::after {
+order[PaymentMethod="Cash"]::after {
   content: "";
   background-image: url("./cash.png");
 }
 
-tr[PaymentMethod="Online"]::after {
+order[PaymentMethod="Online"]::after {
   content: "";
   background-image: url("./wireless.png");
 }
 
-tr[PaymentMethod="Cash"]::after,
-tr[PaymentMethod="Online"]::after {
+order[PaymentMethod="Cash"]::after,
+order[PaymentMethod="Online"]::after {
   background-size: 3.5vh 3.5vh;
   position: absolute;
   width: 3.5vh;
@@ -25,7 +25,7 @@ tr[PaymentMethod="Online"]::after {
   min-height: 1rem;
 }
 
-tr[class="header"] {
+head {
   font-weight: bold;
   height: 2rem;
   line-height: 2rem;
@@ -35,19 +35,16 @@ tr[class="header"] {
   margin-bottom: 0.5rem;
 }
 
-table[class="orders"] {
+orders {
   background-color: #e8edff;
   padding: 1rem;
   border-top: 2px solid #94aafb;
   border-bottom: 2px solid #94aafb;
   min-width: 730px;
-}
-tbody,
-thead {
   width: 100%;
 }
 
-tr[class="order"] {
+order {
   margin-bottom: 0.5rem;
   display: block;
   border: 2px solid white;
@@ -61,86 +58,77 @@ tr[class="order"] {
   cursor: pointer;
 }
 
-tr[class="order"]:hover {
+order:hover {
   background-color: #b9c9fe;
   color: #3333a6;
   scale: 1.03;
   transition: 0.5s ease-in-out;
 }
 
-td[class="orderNo"],
-th[class="orderNo"] {
+orderNo {
   width: 8vw;
   min-width: 3.7rem;
 }
 
-td[class="code"],
-th[class="code"] {
+code {
   width: 5vw;
   min-width: 2.4rem;
 }
 
-td[class="name"],
-td[class="custNo"],
-th[class="name"],
-th[class="custNo"] {
+name,
+custNo {
   width: 15vw;
   min-width: 6.82rem;
 }
 
-td[class="price"],
-td[class="quantity"],
-td[class="total"],
-th[class="price"],
-th[class="quantity"],
-th[class="total"] {
+price,
+quantity,
+total {
   width: 10vw;
   min-width: 4.5rem;
 }
 
-td[class="price"]::before,
-td[class="total"]::before {
+product > price::before,
+order > total::before {
   content: "$ ";
 }
 
-td[class="date"],
-th[class="date"] {
+date {
   width: 10vw;
   min-width: 6rem;
 }
 
-td[class="custNo"],
-th[class="custNo"] {
+custNo {
   margin-left: 1vh;
   margin-left: 0;
 }
 
 /* small */
 @media screen and (min-width: 768px) {
-  tr[PaymentMethod="Cash"]::after,
-  tr[PaymentMethod="Online"]::after {
+  order[PaymentMethod="Cash"]::after,
+  order[PaymentMethod="Online"]::after {
     right: 1rem;
   }
 }
 /* medium screen */
 @media screen and (min-width: 992px) {
-  tr[class="order"] {
+  order {
     padding: 0;
   }
 }
 /* full size */
 @media screen and (min-width: 1200px) {
-  tr[class="order"] {
+  order {
     padding: 0 2rem;
   }
-  tr[PaymentMethod="Cash"]::after,
-  tr[PaymentMethod="Online"]::after {
+  order[PaymentMethod="Cash"]::after,
+  order[PaymentMethod="Online"]::after {
     right: 4rem;
   }
   tr[class="header"] {
     padding-left: 2rem;
   }
-  th[class="payMethod"]::after {
+  payMethod::after {
     content: "PayMethod";
   }
 }
@@ -153,8 +141,11 @@ th[class="custNo"] {
     font-size: 1.2rem;
     font-weight: bold;
   }
-  tr[PaymentMethod="Cash"]::after,
-  tr[PaymentMethod="Online"]::after {
+  date {
+    width: 15vw;
+  }
+  order[PaymentMethod="Cash"]::after,
+  order[PaymentMethod="Online"]::after {
     right: 0;
     background-size: 2.5vh 2.5vh;
     width: 2.5vh;
