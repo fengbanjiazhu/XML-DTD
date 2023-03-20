@@ -125,7 +125,7 @@ custNo {
   order[PaymentMethod="Online"]::after {
     right: 4rem;
   }
-  tr[class="header"] {
+  head {
     padding-left: 2rem;
   }
   payMethod::after {
