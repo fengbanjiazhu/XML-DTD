@@ -1,0 +1,75 @@
+SCRIPT {
+  display: none;
+}
+* {
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+head {
+  font-weight: bold;
+  height: 2rem;
+  line-height: 2rem;
+  background-color: #9f8463 !important;
+  width: 100%;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+products {
+  background-color: #424754;
+  padding: 1rem;
+  min-width: 730px;
+  width: 100%;
+  text-align: center;
+}
+
+product {
+  margin-bottom: 0.5rem;
+  display: block;
+  border: 2px solid white;
+  width: 100%;
+  text-align: left;
+  line-height: 4vh;
+  color: #d4dfe5;
+  box-sizing: border-box;
+  cursor: pointer;
+  width: 100%;
+  line-height: 4vh;
+  display: flex;
+}
+
+product:hover {
+  color: #ddab5e;
+  font-weight: bold;
+  scale: 1.03;
+  transition: 0.5s ease-in-out;
+}
+
+productInfo {
+  width: 75%;
+}
+
+productInfo > name,
+productInfo > code,
+productInfo > price {
+  width: 33%;
+}
+
+name,
+code,
+price,
+quantity {
+  width: 24%;
+  text-align: center;
+}
+
+@media screen and (orientation: portrait) and (max-device-width: 600px) and (max-device-height: 800px),
+  screen and (orientation: landscape) and (max-device-width: 800px) and (max-device-height: 600px),
+  only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+  * {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+}

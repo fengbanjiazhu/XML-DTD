@@ -32,7 +32,7 @@
 <orders id="orderXML">
  
         <head class="header">
-            <orderNo>OrderNo</orderNo>
+            <orderNo>O.N.</orderNo>
             <code>Code</code>
             <name>Name</name>
             <price>Price</price>

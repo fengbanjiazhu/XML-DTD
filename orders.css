@@ -2,6 +2,7 @@ SCRIPT {
   display: none;
 }
 * {
+  box-sizing: border-box;
   display: inline-block;
 }
 
@@ -29,17 +30,21 @@ head {
   font-weight: bold;
   height: 2rem;
   line-height: 2rem;
-  background-color: #b9c9fe !important;
+  background-color: #9f8463 !important;
   width: 100%;
-  color: #0033a6;
+  color: #fff;
   margin-bottom: 0.5rem;
+}
+head > name {
+  margin-left: 0.2rem;
+}
+head > price {
+  margin-left: -0.4rem;
 }
 
 orders {
-  background-color: #e8edff;
+  background-color: #424754;
   padding: 1rem;
-  border-top: 2px solid #94aafb;
-  border-bottom: 2px solid #94aafb;
   min-width: 730px;
   width: 100%;
 }
@@ -50,17 +55,16 @@ order {
   border: 2px solid white;
   width: 100%;
   text-align: left;
-  height: 4vh;
   line-height: 4vh;
   position: relative;
-  color: #666699;
+  color: #d4dfe5;
   box-sizing: border-box;
   cursor: pointer;
 }
 
 order:hover {
-  background-color: #b9c9fe;
-  color: #3333a6;
+  color: #ddab5e;
+  font-weight: bold;
   scale: 1.03;
   transition: 0.5s ease-in-out;
 }
@@ -68,6 +72,7 @@ order:hover {
 orderNo {
   width: 8vw;
   min-width: 3.7rem;
+  text-align: center;
 }
 
 code {
@@ -95,12 +100,15 @@ order > total::before {
 
 date {
   width: 10vw;
-  min-width: 6rem;
+  min-width: 6.3rem;
 }
 
 custNo {
-  margin-left: 1vh;
   margin-left: 0;
+}
+
+order > custNo {
+  margin-left: 0.3rem;
 }
 
 /* small */
@@ -146,7 +154,6 @@ custNo {
   }
   order[PaymentMethod="Cash"]::after,
   order[PaymentMethod="Online"]::after {
-    right: 0;
     background-size: 2.5vh 2.5vh;
     width: 2.5vh;
     height: 2.5vh;

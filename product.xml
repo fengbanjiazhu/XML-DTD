@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="product.css"?>
+
+<!DOCTYPE products [
+    <!ENTITY product001 '
+        <code>001</code>
+        <name>Edible oil</name>
+        <price>90</price>'>
+
+    <!ENTITY product004 '
+        <code>004</code>
+        <name>P_Biscuits</name>
+        <price>10</price>'>
+
+    <!ENTITY product006 '
+        <code>006</code>
+        <name>Toothbrush</name>
+        <price>40</price>'>
+
+    <!ENTITY product008 '
+        <code>006</code>
+        <name>Cornflakes</name>
+        <price>60</price>'>
+
+    <!ENTITY product009 '
+        <code>009</code>
+        <name>shampoo</name>
+        <price>20</price>'>
+]>
+
+<products id="orderXML">
+ 
+    <head class="header">
+        <code>Code</code>
+        <name>Name</name>
+        <price>Price</price>
+        <quantity>Qty</quantity>
+    </head>
+
+
+    <product row="01">
+        <productInfo>&product001;</productInfo>
+        <quantity>300</quantity>
+    </product>
+
+    <product row="02">
+        <productInfo>&product006;</productInfo>
+        <quantity>50</quantity>
+    </product>
+    
+    <product row="03">
+        <productInfo>&product009;</productInfo>
+        <quantity>100</quantity>
+    </product>
+    
+    <product row="04">
+        <productInfo>&product001;</productInfo>
+        <quantity>100</quantity>
+    </product>
+    
+    <product row="05">
+        <productInfo>&product001;</productInfo>
+        <quantity>30</quantity>
+    </product>
+    
+    <product row="06">
+        <productInfo>&product009;</productInfo>
+        <quantity>50</quantity>
+    </product>
+    
+    <product row="07">
+        <productInfo>&product006;</productInfo>
+        <quantity>100</quantity>
+    </product>
+    
+    <product row="08">
+        <productInfo>&product009;</productInfo>
+        <quantity>200</quantity>
+    </product>
+    
+    <product row="09">
+        <productInfo>&product001;</productInfo>
+        <quantity>300</quantity>
+    </product>
+
+    <product row="10">
+        <productInfo>&product009;</productInfo>
+        <quantity>80</quantity>
+    </product>
+
+    <product row="11">
+        <productInfo>&product009;</productInfo>
+        <quantity>6</quantity>
+    </product>
+
+    <product row="12">
+        <productInfo>&product001;</productInfo>
+        <quantity>500</quantity>
+    </product>
+
+    <product row="13">
+        <productInfo>&product006;</productInfo>
+        <quantity>150</quantity>
+    </product>
+
+    <product row="14">
+        <productInfo>&product009;</productInfo>
+        <quantity>200</quantity>
+    </product>
+
+    <product row="15">
+        <productInfo>&product004;</productInfo>
+        <quantity>50</quantity>
+    </product>
+
+    <product row="16">
+        <productInfo>&product004;</productInfo>
+        <quantity>50</quantity>
+    </product>
+
+    <product row="17">
+        <productInfo>&product008;</productInfo>
+        <quantity>40</quantity>
+    </product>
+
+</products>
