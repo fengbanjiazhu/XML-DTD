@@ -45,7 +45,7 @@ head > price {
 orders {
   background-color: #424754;
   padding: 1rem;
-  min-width: 730px;
+  min-width: 790px;
   width: 100%;
 }
 
@@ -158,5 +158,9 @@ order > custNo {
     width: 2.5vh;
     height: 2.5vh;
     bottom: 0.75vh;
+  }
+  quantity {
+    width: 6vw;
+    min-width: 3rem;
   }
 }
