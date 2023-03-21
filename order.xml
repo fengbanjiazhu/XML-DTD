@@ -5,10 +5,9 @@
     <!ELEMENT orders (head,order+)>
     <!ELEMENT head (orderNo, code, name, price,quantity,total,date,custNo,payMethod)> 
     <!ELEMENT order (orderNo, product,quantity,total,date,custNo)>
+    <!ELEMENT product (code, name, price)>
    
     <!ELEMENT orderNo (#PCDATA)>
-
-    <!ELEMENT product (code, name, price)>
     <!ELEMENT code (#PCDATA)>
     <!ELEMENT name (#PCDATA)>
     <!ELEMENT price (#PCDATA)>
@@ -68,7 +67,6 @@
             <custNo col="8">Customer No</custNo>
             <payMethod></payMethod>
         </head>
-
     
         <order row="01" PaymentMethod="Cash">
             <orderNo>1001</orderNo>
