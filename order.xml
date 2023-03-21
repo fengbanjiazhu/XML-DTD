@@ -2,6 +2,28 @@
 <?xml-stylesheet type="text/css" href="orders.css"?>
 
 <!DOCTYPE orders [
+    <!ELEMENT orders (head,order+)>
+    <!ELEMENT head (orderNo, code, name, price,quantity,total,date,custNo,payMethod)> 
+    <!ELEMENT order (orderNo, product,quantity,total,date,custNo)>
+   
+    <!ELEMENT orderNo (#PCDATA)>
+
+    <!ELEMENT product (code, name, price)>
+    <!ELEMENT code (#PCDATA)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT price (#PCDATA)>
+
+    <!ELEMENT quantity (#PCDATA)>
+    <!ELEMENT total (#PCDATA)>
+    <!ELEMENT date (#PCDATA)>
+    <!ELEMENT custNo (#PCDATA)>
+    <!ELEMENT payMethod (#PCDATA)>
+    
+    <!ATTLIST orders id CDATA #REQUIRED>
+    <!ATTLIST head class CDATA #REQUIRED>
+    <!ATTLIST order row CDATA #REQUIRED>
+    <!ATTLIST order PaymentMethod CDATA #REQUIRED>
+
     <!ENTITY product001 '
         <code>001</code>
         <name>Edible oil</name>
@@ -27,6 +49,8 @@
         <name>shampoo</name>
         <price>20</price>'>
 ]>
+
+
 
 
 <orders id="orderXML">

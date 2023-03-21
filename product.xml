@@ -2,6 +2,23 @@
 <?xml-stylesheet type="text/css" href="product.css"?>
 
 <!DOCTYPE products [
+    <!ELEMENT products (head,product+)> 
+    <!ELEMENT head ( code, name, price,quantity)> 
+    <!ELEMENT product ( productInfo,quantity)>
+
+    <!ELEMENT productInfo (code, name, price)>
+
+    <!ELEMENT code (#PCDATA)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT price (#PCDATA)>
+
+    <!ELEMENT quantity (#PCDATA)>
+
+
+    <!ATTLIST products id CDATA #REQUIRED>
+    <!ATTLIST head class CDATA #REQUIRED>
+    <!ATTLIST product row CDATA #REQUIRED>
+
     <!ENTITY product001 '
         <code>001</code>
         <name>Edible oil</name>
@@ -27,7 +44,8 @@
         <name>shampoo</name>
         <price>20</price>'>
 ]>
-
+<!--  -->
+<!--  -->
 <products id="orderXML">
  
     <head class="header">
