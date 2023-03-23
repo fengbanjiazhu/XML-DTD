@@ -7,13 +7,11 @@
     <!ELEMENT product ( productInfo,quantity)>
 
     <!ELEMENT productInfo (code, name, price)>
-
     <!ELEMENT code (#PCDATA)>
     <!ELEMENT name (#PCDATA)>
     <!ELEMENT price (#PCDATA)>
-
+    
     <!ELEMENT quantity (#PCDATA)>
-
 
     <!ATTLIST products id CDATA #REQUIRED>
     <!ATTLIST head class CDATA #REQUIRED>

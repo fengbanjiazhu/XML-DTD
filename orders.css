@@ -34,6 +34,7 @@ head {
   width: 100%;
   color: #fff;
   margin-bottom: 0.5rem;
+  padding: 0 1rem 0 2rem;
 }
 head > name {
   margin-left: 0.2rem;
@@ -51,6 +52,7 @@ orders {
 
 order {
   margin-bottom: 0.5rem;
+  padding: 0 1rem 0 2rem;
   display: block;
   border: 2px solid white;
   width: 100%;
@@ -69,18 +71,13 @@ order:hover {
   transition: 0.5s ease-in-out;
 }
 
-orderNo {
-  width: 8vw;
-  min-width: 3.7rem;
-  text-align: center;
-}
-
 code {
   width: 5vw;
   min-width: 2.4rem;
 }
 
 name,
+date,
 custNo {
   width: 15vw;
   min-width: 6.82rem;
@@ -98,11 +95,6 @@ order > total::before {
   content: "$ ";
 }
 
-date {
-  width: 10vw;
-  min-width: 6.3rem;
-}
-
 custNo {
   margin-left: 0;
 }
@@ -111,17 +103,11 @@ order > custNo {
   margin-left: 0.3rem;
 }
 
-/* small */
-@media screen and (min-width: 768px) {
-  order[PaymentMethod="Cash"]::after,
-  order[PaymentMethod="Online"]::after {
-    right: 1rem;
-  }
-}
 /* medium screen */
 @media screen and (min-width: 992px) {
-  order {
-    padding: 0;
+  order[PaymentMethod="Cash"]::after,
+  order[PaymentMethod="Online"]::after {
+    right: 4rem;
   }
 }
 /* full size */
@@ -131,7 +117,7 @@ order > custNo {
   }
   order[PaymentMethod="Cash"]::after,
   order[PaymentMethod="Online"]::after {
-    right: 4rem;
+    right: 8rem;
   }
   head {
     padding-left: 2rem;
